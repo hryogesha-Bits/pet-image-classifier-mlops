@@ -14,7 +14,7 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' }}
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: ${{ vars.IMAGE_NAME || format('ghcr.io/{0}/pet-image-classifier-mlops', github.repository_owner) }}
+      IMAGE_NAME: ghcr.io/hryogesha-bits/pet-image-classifier-mlops
       IMAGE_TAG: ${{ github.event.workflow_run.head_sha }}
       MODEL_NAME: baseline_cnn
 
